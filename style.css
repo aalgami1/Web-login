@@ -1,0 +1,120 @@
+/* Reset dan dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d47b07, #ff9102);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay latar belakang */
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent),
+              radial-gradient(circle at bottom right, rgba(255,255,255,0.1), transparent);
+  z-index: 0;
+  filter: blur(20px);
+}
+
+/* Kotak login */
+.login-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Tombol login */
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #5a67d8;
+}
+
+/* Lupa Password */
+.forgot-password {
+  text-align: right;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.forgot-password a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
